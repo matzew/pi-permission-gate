@@ -1,0 +1,23 @@
+{
+  "name": "pi-permission-gate",
+  "version": "0.1.0",
+  "description": "Pi extension that asks before risky tool calls and blocks them when no UI can confirm.",
+  "type": "module",
+  "repository": { "type": "git", "url": "git+https://github.com/matzew/pi-permission-gate.git" },
+  "keywords": ["pi-package"],
+  "engines": { "node": ">=22.19.0" },
+  "pi": { "extensions": ["./index.ts"] },
+  "files": ["index.ts", "rules.ts", "README.md"],
+  "scripts": {
+    "check": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test test/*.test.ts"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "1.5.2",
+    "@types/node": "^22.19.0",
+    "typescript": "^5.9.3"
+  }
+}
